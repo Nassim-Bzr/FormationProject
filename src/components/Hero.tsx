@@ -33,9 +33,9 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Découvrez la Sous-Loc 
-                <span className="block">Académie dès</span>
-                <span className="block">aujourd'hui</span>
+                Maîtrisez la
+                <span className="block">Sous-Location</span>
+                <span className="block text-[#E63946]">Sans Être Propriétaire</span>
               </motion.h1>
             </div>
           </motion.div>
@@ -49,27 +49,27 @@ const Hero = () => {
           >
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                La Sous-Loc Académie est votre passerelle vers le succès dans le domaine 
-                de la sous-location. Rejoignez-nous pour transformer vos compétences et 
-                maximiser vos revenus.
+                Générez des revenus immobiliers dès maintenant avec nos techniques éprouvées 
+                de sous-location. Formation complète, accompagnement personnalisé et résultats garantis.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
-                  className="bg-[#E63946] hover:bg-[#E63946]/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  En savoir plus
-                </motion.button>
-                
                 <motion.a
-                  href="/inscription"
+                  href="#pricing"
                   className="bg-[#E63946] hover:bg-[#E63946]/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  S'inscrire
+                  Voir les formations
+                </motion.a>
+                
+                <motion.a
+                  href="/inscription"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 inline-block"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Commencer maintenant
                 </motion.a>
               </div>
             </div>

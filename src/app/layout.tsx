@@ -16,9 +16,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Sous-Loc Académie | École Supérieure de Formation",
-  description: "Découvrez Sous-Loc Académie, votre école supérieure de formation avec plus de 20 diplômes et cursus. Formations en Informatique, Commerce, Marketing et Communication.",
-  keywords: "école supérieure, formation, diplômes, informatique, commerce, marketing, communication, BTS, Bachelor, Master",
+  title: "Sous-Loc Académie | Formation Sous-Location Immobilière",
+  description: "Apprenez la sous-location immobilière sans devenir propriétaire. Formations de 249€ à 3000€ - Techniques éprouvées, accompagnement personnalisé, résultats garantis.",
+  keywords: "sous-location, immobilier, investissement, formation, airbnb, location courte durée, revenus passifs, indépendance financière",
   authors: [{ name: "Sous-Loc Académie" }],
   creator: "Sous-Loc Académie",
   publisher: "Sous-Loc Académie",
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: "https://sous-loc-academie.com",
-    title: "Sous-Loc Académie | École Supérieure de Formation",
-    description: "Découvrez Sous-Loc Académie, votre école supérieure de formation avec plus de 20 diplômes et cursus.",
+    title: "Sous-Loc Académie | Formation Sous-Location Immobilière",
+    description: "Maîtrisez la sous-location immobilière sans devenir propriétaire. Formations complètes de 249€ à 3000€ avec accompagnement personnalisé.",
     siteName: "Sous-Loc Académie",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sous-Loc Académie | École Supérieure de Formation",
-    description: "Découvrez Sous-Loc Académie, votre école supérieure de formation avec plus de 20 diplômes et cursus.",
+    title: "Sous-Loc Académie | Formation Sous-Location Immobilière",
+    description: "Générez des revenus avec la sous-location immobilière. Formations de 249€ à 3000€ - Techniques éprouvées et accompagnement.",
   },
   viewport: "width=device-width, initial-scale=1",
 };

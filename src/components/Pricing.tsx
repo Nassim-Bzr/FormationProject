@@ -9,9 +9,10 @@ const Pricing = () => {
       name: "L'Essentiel Juridique",
       price: "249€",
       features: [
-        "Le socle indispensable pour démarrer en toute légalité.",
-        "Bail profesionnel a titre d’habitation",
-        "Mises à jour régulières"
+        "Le socle indispensable pour démarrer la sous-location en toute légalité",
+        "Modèles de baux professionnels à titre d'habitation",
+        "Guide juridique complet et sécurisé",
+        "Mises à jour régulières des réglementations"
       ],
       buttonText: "Commencer maintenant",
       popular: false
@@ -20,26 +21,29 @@ const Pricing = () => {
       name: "La Méthode Reproductible", 
       price: "499€",
       features: [
-        "Notion complet : outils, fournisseurs, gestion...",
-        "Scripts réels de prospection, accueil et relation client",
+        "Système complet : outils, fournisseurs, gestion automatisée",
+        "Scripts réels de prospection et négociation propriétaires",
         "Vidéos de démarchage téléphonique en conditions réelles",
-        "Mises à jour exclusives"
+        "Stratégies de pricing et optimisation des revenus",
+        "Accès à la communauté privée d'investisseurs",
+        "Mises à jour exclusives et nouvelles techniques"
       ],
       buttonText: "Commencer maintenant",
       popular: true
     },
     {
       name: "Le Pack Clé en Main",
-      subtitle: "Sur candidature uniquement",
-      price: null,
+      subtitle: "Accompagnement personnalisé",
+      price: "Sur devis",
+      priceRange: "2500€ - 3000€",
       features: [
-        "Accès complet aux ressources",
-        "Consultation personnalisée",
-        
-        "Service commercial",
-        "Accès à des événements",
-        "Formation sur mesure",
-        "Support 24/7"
+        "Tout le contenu des formules précédentes",
+        "Accompagnement 1-to-1 avec un expert",
+        "Recherche et négociation de votre premier bien",
+        "Service commercial et mise en relation propriétaires",
+        "Formation sur mesure selon votre marché local",
+        "Support prioritaire 7j/7",
+        "Garantie de résultats sous 90 jours"
       ],
       buttonText: "Planifier un appel",
       popular: false
@@ -97,6 +101,9 @@ const Pricing = () => {
                     <div className="text-4xl font-bold text-white font-poppins">
                       {plan.price}
                     </div>
+                  )}
+                  {plan.priceRange && (
+                    <p className="text-white/60 text-sm mt-1">({plan.priceRange})</p>
                   )}
                 </div>
 
