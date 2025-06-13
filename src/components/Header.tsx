@@ -8,19 +8,40 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isFormationsOpen, setIsFormationsOpen] = useState(false)
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (hoverTimeout) {
+        clearTimeout(hoverTimeout)
+      }
+    }
+  }, [hoverTimeout])
+
+  const handleMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+      setHoverTimeout(null)
+    }
+    setIsFormationsOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsFormationsOpen(false)
+    }, 200) // Délai de 200ms avant fermeture
+    setHoverTimeout(timeout)
+  }
 
   const formationsItems = [
-    "Informatique",
-    "Commerce & Marketing", 
-    "Communication"
+    { name: "L'Essentiel Juridique", price: "249€", href: "/formations/essentiel-juridique" },
+    { name: "La Méthode Reproductible", price: "499€", href: "/formations/methode-reproductible" },
+    { name: "Le Pack Clé en Main", price: "Sur devis", href: "/formations/pack-cle-en-main" }
   ]
 
   return (
@@ -32,7 +53,7 @@ const Header = () => {
           {/* Left Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a 
-              href="#accueil" 
+              href="/" 
               className="text-white hover:text-white/80 transition-colors duration-200 font-medium"
             >
               Accueil
@@ -47,8 +68,8 @@ const Header = () => {
             {/* Formations Dropdown */}
             <div className="relative">
               <button
-                onMouseEnter={() => setIsFormationsOpen(true)}
-                onMouseLeave={() => setIsFormationsOpen(false)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 className="flex items-center space-x-1 text-white hover:text-white/80 transition-colors duration-200 font-medium"
               >
                 <span>Formations</span>
@@ -60,17 +81,20 @@ const Header = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  onMouseEnter={() => setIsFormationsOpen(true)}
-                  onMouseLeave={() => setIsFormationsOpen(false)}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                   className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-50"
                 >
                   {formationsItems.map((item, index) => (
                     <a
                       key={index}
-                      href="#pricing"
-                      className="block px-4 py-3 text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors duration-200"
+                      href={item.href}
+                      className="block px-4 py-3 text-neutral-700 hover:bg-neutral-50 hover:text-[#E63946] transition-colors duration-200"
                     >
-                      {item}
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">{item.name}</span>
+                        <span className="text-sm text-[#E63946] font-semibold">{item.price}</span>
+                      </div>
                     </a>
                   ))}
                 </motion.div>
@@ -114,7 +138,7 @@ const Header = () => {
           >
             <div className="px-4 py-6 space-y-4">
               <a 
-                href="#accueil" 
+                href="/" 
                 className="block text-white hover:text-white/80 transition-colors duration-200 font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -134,11 +158,14 @@ const Header = () => {
                 {formationsItems.map((item, index) => (
                   <a
                     key={index}
-                    href="#pricing"
-                    className="block text-white/80 hover:text-white transition-colors duration-200 pl-4 py-1"
+                    href={item.href}
+                    className="block text-white/80 hover:text-white transition-colors duration-200 pl-4 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item}
+                    <div className="flex justify-between items-center">
+                      <span>{item.name}</span>
+                      <span className="text-[#E63946] text-sm font-semibold">{item.price}</span>
+                    </div>
                   </a>
                 ))}
               </div>
