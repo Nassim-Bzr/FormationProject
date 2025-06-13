@@ -2,12 +2,16 @@
 
 import { motion } from 'framer-motion'
 import { Box, Users, Target, Award } from 'lucide-react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default function APropos() {
   return (
     <main className="min-h-screen">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-gray-900 to-black text-white">
+      <section className="relative py-32 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -18,7 +22,7 @@ export default function APropos() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-poppins">
               À Propos de Nous
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
               Découvrez comment la Sous-Loc Académie révolutionne l'investissement immobilier
               et accompagne ses étudiants vers le succès.
             </p>
@@ -108,7 +112,7 @@ export default function APropos() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -117,10 +121,10 @@ export default function APropos() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
               Nos Valeurs
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Ce qui nous guide dans notre mission d'accompagnement vers le succès
             </p>
           </motion.div>
@@ -149,15 +153,15 @@ export default function APropos() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-neutral-900 border border-neutral-700 p-8 rounded-2xl shadow-lg hover:shadow-xl hover:border-[#E63946]/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-[#E63946] rounded-2xl flex items-center justify-center text-white mb-6">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-white/80 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -167,7 +171,7 @@ export default function APropos() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -199,10 +203,10 @@ export default function APropos() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-poppins">
+              <h2 className="text-4xl md:text-5xl font-bold text-white font-poppins">
                 Notre Histoire
               </h2>
-              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-lg text-white leading-relaxed">
                 <p>
                   Tout a commencé par une passion : celle de rendre l'investissement immobilier 
                   accessible à tous. Nos fondateurs, forts de leur expérience dans la sous-location, 
@@ -259,6 +263,7 @@ export default function APropos() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 } 

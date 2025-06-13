@@ -9,43 +9,42 @@ const Pricing = () => {
       name: "L'Essentiel Juridique",
       price: "249€",
       features: [
-        "Le socle indispensable pour démarrer la sous-location en toute légalité",
-        "Modèles de baux professionnels à titre d'habitation",
-        "Guide juridique complet et sécurisé",
-        "Mises à jour régulières des réglementations"
+        "Le socle indispensable pour démarrer en toute légalité.",
+        "Bail profesionnel a titre d’habitation",
+        "Mises à jour régulières"
       ],
       buttonText: "Commencer maintenant",
+      link: "https://buy.stripe.com/3cIcN43I7c6AbXTfj2cjS01",
       popular: false
     },
     {
       name: "La Méthode Reproductible", 
       price: "499€",
       features: [
-        "Système complet : outils, fournisseurs, gestion automatisée",
-        "Scripts réels de prospection et négociation propriétaires",
+        "Notion complet : outils, fournisseurs, gestion...",
+        "Scripts réels de prospection, accueil et relation client",
         "Vidéos de démarchage téléphonique en conditions réelles",
-        "Stratégies de pricing et optimisation des revenus",
-        "Accès à la communauté privée d'investisseurs",
-        "Mises à jour exclusives et nouvelles techniques"
+        "Mises à jour exclusives"
       ],
       buttonText: "Commencer maintenant",
+      link: "https://buy.stripe.com/7sY4gy92r5Ic1jfb2McjS02",
       popular: true
     },
     {
       name: "Le Pack Clé en Main",
-      subtitle: "Accompagnement personnalisé",
-      price: "Sur devis",
-      priceRange: "2500€ - 3000€",
+      subtitle: "Sur candidature uniquement",
+      price: null,
       features: [
-        "Tout le contenu des formules précédentes",
-        "Accompagnement 1-to-1 avec un expert",
-        "Recherche et négociation de votre premier bien",
-        "Service commercial et mise en relation propriétaires",
-        "Formation sur mesure selon votre marché local",
-        "Support prioritaire 7j/7",
-        "Garantie de résultats sous 90 jours"
+        "Accès complet aux ressources",
+        "Consultation personnalisée",
+        
+        "Service commercial",
+        "Accès à des événements",
+        "Formation sur mesure",
+        "Support 24/7"
       ],
       buttonText: "Planifier un appel",
+      link: "inscription",
       popular: false
     }
   ]
@@ -102,9 +101,6 @@ const Pricing = () => {
                       {plan.price}
                     </div>
                   )}
-                  {plan.priceRange && (
-                    <p className="text-white/60 text-sm mt-1">({plan.priceRange})</p>
-                  )}
                 </div>
 
                 <ul className="space-y-4 flex-grow">
@@ -119,7 +115,7 @@ const Pricing = () => {
                 </ul>
 
                 <motion.a
-                  href="/inscription"
+                  href={plan.link}
                   className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 text-center inline-block mt-auto ${
                     plan.popular 
                       ? 'bg-[#E63946] hover:bg-[#E63946]/90 text-white' 
