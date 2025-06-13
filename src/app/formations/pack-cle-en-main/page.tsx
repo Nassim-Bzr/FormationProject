@@ -262,7 +262,7 @@ export default function PackCleEnMain() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#E63946] to-red-600 text-white">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -271,29 +271,32 @@ export default function PackCleEnMain() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold font-poppins">
-              Prêt pour l'Accompagnement Premium ?
-            </h2>
-            <p className="text-xl opacity-90">
-              Planifiez votre appel découverte gratuit pour discuter de votre projet personnalisé.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href="/inscription"
-                className="bg-white text-[#E63946] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Planifier un appel gratuit
-              </motion.a>
-              <motion.a
-                href="/"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#E63946] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 inline-block"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Retour à l'accueil
-              </motion.a>
+            <div className="bg-slate-700/40 backdrop-blur-sm border border-slate-600/30 rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300">
+              <div className="text-5xl mb-6 opacity-80">💼</div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-100 font-poppins mb-6">
+                Prêt pour l'Accompagnement Premium ?
+              </h2>
+              <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                Planifiez votre appel découverte gratuit pour discuter de votre projet personnalisé.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.a
+                  href="/inscription"
+                  className="bg-slate-600 hover:bg-slate-500 text-slate-100 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-block"
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Planifier un appel gratuit
+                </motion.a>
+                <motion.a
+                  href="/"
+                  className="border-2 border-slate-500/50 text-slate-300 hover:bg-slate-600/30 hover:border-slate-400/70 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 inline-block backdrop-blur-sm"
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Retour à l'accueil
+                </motion.a>
+              </div>
             </div>
           </motion.div>
         </div>

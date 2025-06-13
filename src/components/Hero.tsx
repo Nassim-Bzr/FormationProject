@@ -28,14 +28,14 @@ const Hero = () => {
           >
             <div className="space-y-6">
               <motion.h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-white font-poppins leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white font-poppins leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Maîtrisez la
-                <span className="block">Sous-Location</span>
-                <span className="block text-[#E63946]">Sans Être Propriétaire</span>
+                <span className="block">Location</span>
+                <span className="block text-[#E63946]">Sans être propriétaire</span>
               </motion.h1>
             </div>
           </motion.div>

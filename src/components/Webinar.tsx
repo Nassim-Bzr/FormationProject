@@ -44,8 +44,7 @@ const Webinar = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros 
-            elementum tristique.
+        Tous les dimanches et lundi à 20h
           </motion.p>
 
           <motion.div

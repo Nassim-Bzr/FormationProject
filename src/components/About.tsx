@@ -36,7 +36,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Découvrez notre accompagnement
+                Découvrez notre formule clé en main
               </motion.h2>
 
               <motion.div
