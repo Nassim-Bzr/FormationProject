@@ -89,12 +89,18 @@ export default function APropos() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative overflow-hidden rounded-2xl">
+              <div className="relative overflow-hidden rounded-2xl group">
                 <img
                   src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="People working together around a table"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                {/* Gradient overlays for smooth integration */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent" />
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#E63946]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </motion.div>
           </div>
@@ -169,12 +175,21 @@ export default function APropos() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="relative group"
             >
-              <img
-                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Success story"
-                className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
-              />
+              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Success story"
+                  className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gradient overlays for smooth integration */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent" />
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#E63946]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
             </motion.div>
 
             <motion.div

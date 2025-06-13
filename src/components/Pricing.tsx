@@ -10,7 +10,7 @@ const Pricing = () => {
       price: "249€",
       features: [
         "Le socle indispensable pour démarrer en toute légalité.",
-        "Support par email",
+        "Bail profesionnel a titre d’habitation",
         "Mises à jour régulières"
       ],
       buttonText: "Commencer maintenant",
@@ -35,9 +35,11 @@ const Pricing = () => {
       features: [
         "Accès complet aux ressources",
         "Consultation personnalisée",
-        "Support 24/7",
+        
+        "Service commercial",
         "Accès à des événements",
-        "Formation sur mesure"
+        "Formation sur mesure",
+        "Support 24/7"
       ],
       buttonText: "Planifier un appel",
       popular: false
@@ -55,7 +57,7 @@ const Pricing = () => {
           className="text-center space-y-4 mb-16"
         >
           <span className="text-white/70 text-lg font-medium">Tarifs</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-poppins leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-poppins leading-tight">
             Lancez vous dès maintenant
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
