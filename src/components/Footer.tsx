@@ -25,13 +25,7 @@ const Footer = () => {
     }
   ]
 
-  const footerLinks = [
-    "Lien Un",
-    "Lien Deux", 
-    "Lien Trois",
-    "Lien Quatre",
-    "Lien Cinq"
-  ]
+
 
   const legalLinks = [
     "Politique de Confidentialité",
@@ -85,15 +79,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
-            {footerLinks.map((link, index) => (
-              <a
-                key={index}
-                href="#"
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium"
-              >
-                {link}
-              </a>
-            ))}
+
           </motion.div>
 
           <div className="border-t border-white/10 pt-8">

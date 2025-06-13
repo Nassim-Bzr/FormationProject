@@ -15,6 +15,7 @@ const Pricing = () => {
       ],
       buttonText: "Commencer maintenant",
       link: "https://buy.stripe.com/3cIcN43I7c6AbXTfj2cjS01",
+      detailsLink: "/formations/essentiel-juridique",
       popular: false
     },
     {
@@ -28,6 +29,7 @@ const Pricing = () => {
       ],
       buttonText: "Commencer maintenant",
       link: "https://buy.stripe.com/7sY4gy92r5Ic1jfb2McjS02",
+      detailsLink: "/formations/methode-reproductible",
       popular: true
     },
     {
@@ -45,6 +47,7 @@ const Pricing = () => {
       ],
       buttonText: "Planifier un appel",
       link: "inscription",
+      detailsLink: "/formations/pack-cle-en-main",
       popular: false
     }
   ]
@@ -114,18 +117,31 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <motion.a
-                  href={plan.link}
-                  className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 text-center inline-block mt-auto ${
-                    plan.popular 
-                      ? 'bg-[#E63946] hover:bg-[#E63946]/90 text-white' 
-                      : 'bg-[#E63946] hover:bg-[#E63946]/90 text-white'
-                  }`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {plan.buttonText}
-                </motion.a>
+                <div className="space-y-3 mt-auto">
+                  <motion.a
+                    href={plan.detailsLink}
+                    className="w-full text-center text-white/70 hover:text-white text-sm font-medium transition-all duration-200 inline-flex items-center justify-center gap-2 py-2 hover:bg-white/5 rounded-lg group"
+                    whileHover={{ scale: 1.01 }}
+                  >
+                    <span>Voir les détails</span>
+                    <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </motion.a>
+
+                  <motion.a
+                    href={plan.link}
+                    className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 text-center inline-block ${
+                      plan.popular 
+                        ? 'bg-[#E63946] hover:bg-[#E63946]/90 text-white' 
+                        : 'bg-[#E63946] hover:bg-[#E63946]/90 text-white'
+                    }`}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {plan.buttonText}
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           ))}
